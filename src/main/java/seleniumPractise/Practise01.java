@@ -8,7 +8,7 @@ public class Practise01 {
 	
 	public static void main(String[] args) {
 		
-		String browser = "Chrome";
+		String browser = "Firefox";
 		
 		switch(browser){		
 			case "Chrome" :
@@ -17,7 +17,7 @@ public class Practise01 {
 			case "Firefox" :
 				new FirefoxDriver();
 				break;
-
+				
 		}
 
 	}
