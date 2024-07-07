@@ -1,15 +1,20 @@
 package seleniumPractise;
 
+import java.util.Arrays;
+
 public class JavaQuestionsPractise {
 
 	public static void main(String[] args) {
 
 		JavaQuestionsPractise p = new JavaQuestionsPractise();
-		
+
 		p.swapTwoNumber(3, 7);
 		p.findFactorial(5);
-		p.CheckPrimeNumber();
+		p.checkPrimeNumber(2);
 		p.reverseString("LearnCoding");
+		p.checkPalindrome("Madams");
+		int[] numArray = { 1, 4, 9, 2, 7 };
+		p.largestInArray(numArray);
 
 	}
 
@@ -47,13 +52,10 @@ public class JavaQuestionsPractise {
 
 	}
 
-	//Program to check if a given number is prime or not prime
-	public void CheckPrimeNumber() {
-		int pnumber = 2;
+	// Program to check if a given number is prime or not prime
+	public void checkPrimeNumber(int pnumber) {
 
-		JavaQuestionsPractise c = new JavaQuestionsPractise();
-
-		if (c.isPrime(pnumber) == true) {
+		if (this.isPrime(pnumber) == true) {
 			System.out.println(pnumber + " " + "is a Prime number");
 		} else {
 			System.out.println(pnumber + " " + "is a not Prime number");
@@ -73,7 +75,7 @@ public class JavaQuestionsPractise {
 
 	// program to reverse a string without using built-in functions
 
-	public void reverseString(String givenString) {
+	public String reverseString(String givenString) {
 
 		// String givenString = "LearningJava";
 
@@ -95,7 +97,32 @@ public class JavaQuestionsPractise {
 		String reveresedString = new String(charArray);
 
 		System.out.println(reveresedString);
-		
+		return reveresedString;
+
+	}
+
+	public void checkPalindrome(String givenString) {
+
+		String reveresedString = this.reverseString(givenString);
+
+		if (reveresedString.equalsIgnoreCase(givenString)) {
+			System.out.println(givenString + " " + "is a Palindrome");
+		} else {
+			System.out.println(givenString + " " + "is Not a Palindrome");
+		}
+
+	}
+
+	// Program to find the largest and smallest number in an array.
+
+	public void largestInArray(int[] numbers) {
+
+		Arrays.sort(numbers);
+
+		int last = numbers.length - 1;
+
+		System.out.println(numbers[last] + " " + "is the largest number in the array");
+
 	}
 
 }
