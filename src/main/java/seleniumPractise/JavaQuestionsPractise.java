@@ -8,13 +8,14 @@ public class JavaQuestionsPractise {
 
 		JavaQuestionsPractise p = new JavaQuestionsPractise();
 
-		p.swapTwoNumber(3, 7);
-		p.findFactorial(5);
-		p.checkPrimeNumber(2);
-		p.reverseString("LearnCoding");
-		p.checkPalindrome("Madams");
-		int[] numArray = { 1, 4, 9, 2, 7 };
-		p.largestInArray(numArray);
+//		p.swapTwoNumber(3, 7);
+//		p.findFactorial(5);
+//		p.checkPrimeNumber(2);
+//		p.reverseString("LearnCoding");
+//		p.checkPalindrome("Madams");
+//		int[] numArray = { 1, 4, 9, 2, 7 };
+//		p.largestInArray(numArray);
+		p.findCountOfVowels("LearningJavau");
 
 	}
 
@@ -122,6 +123,37 @@ public class JavaQuestionsPractise {
 		int last = numbers.length - 1;
 
 		System.out.println(numbers[last] + " " + "is the largest number in the array");
+
+	}
+
+	// Java program to count the number of vowels and consonants in a string.
+
+	public void findCountOfVowels(String givenWord) {
+
+		char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+
+		char[] givenWordArray = givenWord.toCharArray();
+		
+		int vowelCount = 0;
+
+		for (int i = 0; i <= givenWordArray.length - 1; i++) {
+
+			for (int j = 0; j <= vowels.length - 1; j++) {
+
+				if (givenWordArray[i] == vowels[j]) {
+
+					System.out.println(givenWordArray[i] + " " + "is a vowel");
+					
+					vowelCount++;
+					
+					//System.out.println(vowelsFound.length());
+					
+					
+				}
+
+			}
+
+		}
 
 	}
 
